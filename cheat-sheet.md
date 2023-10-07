@@ -73,3 +73,4 @@
    * add error container to main layout
    * show error container conditionally
    * pass error to render
+24. Automatically login after register
