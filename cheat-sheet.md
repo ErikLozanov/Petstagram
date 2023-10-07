@@ -53,3 +53,9 @@
    * config cookie parser
    * set cookie with token
 18. Logout
+19. Authentication middleware
+   * create base middleware
+   * use middleware
+   * implement auth middleware
+   * attach decoded token to request
+   * handle invalid token

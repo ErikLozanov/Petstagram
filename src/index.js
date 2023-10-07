@@ -4,6 +4,7 @@ const path = require('path');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 
+const {auth} = require('./middlewares/authMiddleware');
 const routes = require('./routes');
 
 const app = express();
@@ -24,6 +25,8 @@ app.set('views', 'src/views');
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
+// Auth needs to be after cookie parser!
+app.use(auth);
 app.use(routes);
 
 app.listen(5000, console.log('Server is listening on port 5000...'));
