@@ -37,3 +37,7 @@
    * require in user controller
    * add register method 
    * validate if user already exists
+14. Hash password
+   * install bcrypt
+   * hash password
+   
