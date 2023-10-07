@@ -17,3 +17,5 @@
    * add partials folder
    * render homepage
    * fix static paths
+   * render home page
+   
