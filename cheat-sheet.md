@@ -14,3 +14,6 @@
    * config extension
    * config views folder
    * add main layout
+   * add partials folder
+   * render homepage
+   * fix static paths
