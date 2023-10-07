@@ -65,4 +65,10 @@
    * add to res locals
 22. Error handling
    * add 404 page
+   * redirect missing route to 404
    * add global error handler
+   * add error message extractor
+23. Show error notifications
+   * add error container to main layout
+   * show error container conditionally
+   * pass error to render
