@@ -51,3 +51,5 @@
 17. Return token in cookie
    * install cookie parser
    * config cookie parser
+   * set cookie with token
+18. Logout
