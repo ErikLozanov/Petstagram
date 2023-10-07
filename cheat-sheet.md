@@ -45,3 +45,9 @@
    * Validate password with hash
 16. Generate jwt token
    * install jsonwebtoken
+   * promisify jsonwebtoken
+   * create secret
+   * generate token in manager.login
+17. Return token in cookie
+   * install cookie parser
+   * config cookie parser
