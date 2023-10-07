@@ -67,6 +67,7 @@
    * add 404 page
    * redirect missing route to 404
    * add global error handler
+   * use global error handler after routes
    * add error message extractor
 23. Show error notifications
    * add error container to main layout
