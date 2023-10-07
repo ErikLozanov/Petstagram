@@ -22,3 +22,7 @@
 8. Add database
    * install mongoose
    * connect database
+9. Authentication
+   * add user controller
+   * add controller to routes
+   * render login page
