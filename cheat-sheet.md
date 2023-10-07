@@ -36,4 +36,4 @@
 13. Add user manager
    * require in user controller
    * add register method 
-   * add login method
+   * validate if user already exists
