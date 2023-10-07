@@ -61,3 +61,5 @@
    * handle invalid token
 20. Authorization middleware
 21. Dynamic navigation
+   * add conditional in main layout
+   * add to res locals
