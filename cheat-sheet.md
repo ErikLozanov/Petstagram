@@ -18,4 +18,7 @@
    * render homepage
    * fix static paths
    * render home page
-   
+7. Add controllers folder with home controller
+8. Add database
+   * install mongoose
+   * connect database
