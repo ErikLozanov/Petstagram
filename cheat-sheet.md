@@ -40,4 +40,8 @@
 14. Hash password
    * install bcrypt
    * hash password
-   
+15. Login
+   * Find user by username
+   * Validate password with hash
+16. Generate jwt token
+   * install jsonwebtoken

@@ -1,7 +1,19 @@
 const User = require('../models/User');
 
-exports.login = (username, password) => {
-    
+const bcrypt = require('bcrypt');
+
+exports.login = async (username, password) => {
+    const user = await User.findOne({username});
+
+    if (!user) {
+        throw new Error('Invalid user or password!');
+    }
+
+    const isValid = await bcrypt.compare(password, user.password);
+
+    if(!isValid) {
+        throw new Error('Invalid user or password!');
+    }
 };
 
 exports.register = async (userData) => {
