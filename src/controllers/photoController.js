@@ -71,4 +71,14 @@ router.post('/:photoId/edit', async (req, res) => {
     }
 });
 
+router.post('/:photoId/comments', async (req, res) => {
+    const photoId = req.params.photoId;
+    const {message} = req.body;
+    const userId = req.user._id;
+
+    await photoManager.addComment(photoId, {userId, message});
+
+    res.redirect(`/photos/${photoId}/details`);
+});
+
 module.exports = router;
