@@ -32,4 +32,4 @@ app.use(routes);
 // Error handler needs to be after routes!
 app.use(errorHandler);
 
-app.listen(5000, console.log('Server is listening on port 5000...'));
+app.listen(3000, console.log('Server is listening on port 5000...'));
