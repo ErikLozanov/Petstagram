@@ -17,10 +17,9 @@ router.post('/login',async (req, res) => {
         res.cookie(TOKEN_KEY, token);
         res.redirect('/');
     } catch (err) {
+        console.log('hi!');
         res.render('users/login', {error: getErrorMessage(err)});
     }
-
-
 });
 
 router.get('/register', (req, res) => {
