@@ -52,4 +52,23 @@ router.get('/:photoId/delete', async (req, res) => {
     }
 });
 
+
+router.get('/:photoId/edit', async (req, res) => {
+    const photo = await photoManager.getOne(req.params.photoId).lean();
+
+    res.render('photos/edit', { photo });
+});
+
+router.post('/:photoId/edit', async (req, res) => {
+    const photoData = req.body;
+    const photoId = req.params.photoId;
+    try {
+        await photoManager.edit(req.params.photoId, photoData);
+
+        res.redirect(`/photos/${photoId}/details`);
+    } catch (err) {
+        res.render('photos/edit', {error: 'Unable to update photo', ...photoData });
+    }
+});
+
 module.exports = router;
