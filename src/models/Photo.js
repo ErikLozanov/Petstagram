@@ -1,33 +1,41 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const photoSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'Name is required!'],
+        required: [true, "Name is required!"],
     },
     image: {
         type: String,
-        required: [true, 'ImageUrl is required!'],
+        required: [true, "ImageUrl is required!"],
     },
     age: {
         type: String,
-        required: [true, 'Age is required!'],
+        required: [true, "Age is required!"],
     },
     description: {
         type: String,
-        required: [true, 'Description is required!'],
+        required: [true, "Description is required!"],
     },
     location: {
         type: String,
-        required: [true, 'Location is required!'],
+        required: [true, "Location is required!"],
     },
     owner: {
         type: mongoose.Types.ObjectId,
-        ref: 'User',
+        ref: "User",
     },
+    comments: [
+        {
+            userId: mongoose.Types.ObjectId,
+            message: {
+                type: String,
+                required: [true, "Comment message is required!"],
+            },
+        },
+    ],
 });
 
-const Photo = mongoose.model('Photo', photoSchema);
+const Photo = mongoose.model("Photo", photoSchema);
 
 module.exports = Photo;
-
