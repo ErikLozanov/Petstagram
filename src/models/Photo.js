@@ -9,25 +9,25 @@ const photoSchema = new mongoose.Schema({
     image: {
         type: String,
         required: [true, "ImageUrl is required!"],
-        match: [/^https?:\/\//, 'Invalid Url!']
+        match: [/^https?:\/\//, "Invalid Url!"],
     },
     age: {
-        type: String,
+        type: Number,
         required: [true, "Age is required!"],
-        min: 1,
-        max: 100,
+        min: [1, "Age should be bigger than 1"],
+        max: [100, "Age should be lower than 100"],
     },
     description: {
         type: String,
         required: [true, "Description is required!"],
-        minLength: 5,
-        maxLength: 50,
+        minLength: [5, "Minimal length should be at least 5 characters"],
+        maxLength: [50, "Maximal description length is 50 characters"],
     },
     location: {
         type: String,
         required: [true, "Location is required!"],
-        minLength: 5,
-        maxLength: 50,
+        minLength: [5, "Minimal length should be at least 5 characters"],
+        maxLength: [50, "Maximal location length is 50 characters"],
     },
     owner: {
         type: mongoose.Types.ObjectId,
@@ -38,7 +38,7 @@ const photoSchema = new mongoose.Schema({
             user: {
                 type: mongoose.Types.ObjectId,
                 required: true,
-                ref: 'User',
+                ref: "User",
             },
             message: {
                 type: String,
