@@ -25,7 +25,7 @@ router.post('/create',async (req, res) => {
         
         res.redirect('/photos');
     } catch (err) {
-        res.render('photos/create', { error: getErrorMessage(err) });
+        res.render('photos/create', { error: getErrorMessage(err), photoData });
     }
 
 });
