@@ -13,19 +13,19 @@ const photoSchema = new mongoose.Schema({
     },
     age: {
         type: Number,
-        required: [true, "Age is required!"],
+        required: [true, "Age is required"],
         min: [1, "Age should be bigger than 1"],
         max: [100, "Age should be lower than 100"],
     },
     description: {
         type: String,
-        required: [true, "Description is required!"],
+        required: [true, "Description is required"],
         minLength: [5, "Minimal length should be at least 5 characters"],
         maxLength: [50, "Maximal description length is 50 characters"],
     },
     location: {
         type: String,
-        required: [true, "Location is required!"],
+        required: [true, "Location is required"],
         minLength: [5, "Minimal length should be at least 5 characters"],
         maxLength: [50, "Maximal location length is 50 characters"],
     },
